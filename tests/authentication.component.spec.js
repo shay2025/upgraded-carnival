@@ -32,7 +32,8 @@ describe('Component Tests', () => {
 
     test('should set success to OK upon success', function() {
       // GIVEN
-      comp.password = comp.confirmPassword = 'myPassword';
+      comp.password = password;
+      comp.confirmPassword = confirmPassword;
 
       // WHEN
       comp.changePassword();

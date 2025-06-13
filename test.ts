@@ -3,6 +3,10 @@ var EntitySchema = typeorm.EntitySchema;
 
 const Users = require("./entity/Users")
 
+// trigger sast pr for PR comments test
+const query = new URLSearchParams(window.location.search).get('query');
+document.getElementById('search_query').innerText = query;
+
 typeorm.createConnection({
   name: "mysql",
   type: "mysql",
